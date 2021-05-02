@@ -1,7 +1,7 @@
 {
   "name": "westland",
   "description": "Workout music engine for offline generative music rendering.",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "https://github.com/catpea",
   "main": "main.js",
   "scripts": {
