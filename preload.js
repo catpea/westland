@@ -76,15 +76,15 @@ window.addEventListener('DOMContentLoaded', async () => {
 
 
 
-        const seq1 = new Tone.Sequence((time, note) => {
-        	synth1.triggerAttackRelease(note, '8n', time);
-        	// subdivisions are given as subarrays
-        }, [ "C4",  "E4"], "2n").start(0);
+        // const seq1 = new Tone.Sequence((time, note) => {
+        // 	synth1.triggerAttackRelease(note, '8n', time);
+        // 	// subdivisions are given as subarrays
+        // }, [ "C4",  "E4"], "2n").start(0);
 
         const seq2 = new Tone.Sequence((time, note) => {
         	synth2.triggerAttackRelease(note, '8n', time);
         	// subdivisions are given as subarrays
-        }, [ "F4",  ], "4n").start(0);
+        }, [ "F4", "F4",["F4","F4"],"F4", ], "4n").start(0);
 
 
         //
@@ -104,7 +104,7 @@ window.addEventListener('DOMContentLoaded', async () => {
         document.getElementById("player").src = url;
         document.getElementById("player").play()
 
-        document.getElementById("busy").style.display = "none"; 
+        document.getElementById("busy").style.display = "none";
       });
   		//const buffer = await renderingPromise;
   		//renderingPromise.then(() => document.querySelector("tone-play-toggle").disabled = false);
