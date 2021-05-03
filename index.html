@@ -2,16 +2,20 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <!-- https://developer.mozilla.org/en-US/docs/Web/HTTP/CSP -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <meta http-equiv="X-Content-Security-Policy" content="default-src 'self'; script-src 'self'">
-    <title>Hello World!</title>
+    <meta http-equiv="Content-Security-Policy" content="default-src * self blob: data: gap:; style-src * self 'unsafe-inline' blob: data: gap:; script-src * 'self' 'unsafe-eval' 'unsafe-inline' blob: data: gap:; object-src * 'self' blob: data: gap:; img-src * self 'unsafe-inline' blob: data: gap:; connect-src self * 'unsafe-inline' blob: data: gap:; frame-src * self blob: data: gap:;">
+    <title>Westland</title>
+    <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #002b36;
+    }
+    </style>
   </head>
-  <body>
-    <h1>Hello World!</h1>
-    We are using Node.js <span id="node-version"></span>,
-    Chromium <span id="chrome-version"></span>,
-    and Electron <span id="electron-version"></span>.
+  <body style="text-align: center; padding-top: 10rem;">
+    <audio id="player" controls></audio>
+    <div id="busy">
+      <small style="color: #268bd2;">Generating audio, this may take a moment...</small>
+    </div>
 
     <!-- You can also require other files to run in this process -->
     <script src="./renderer.js"></script>
